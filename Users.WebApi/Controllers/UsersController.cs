@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using Common.Dao;
 using Common.Database;
 using Common.Model;
 using Common.Encryption;
 using Newtonsoft.Json;
+using Common.Dao;
 
 namespace Users.WebApi.Controllers
 {
@@ -21,11 +21,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "GetUserByCredentials")]
-        public IActionResult GetUserByCredentials([FromBody] JsonPayload credentialString)
+        public IActionResult GetUserByCredentials([FromBody] JsonPayload credentialJson)
         {
             try
             {
-                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialJson.Data);
                 return Ok(UserDao.GetUserByCredentials(credential.Username, credential.Password));
             }
             catch (Exception ex)
@@ -35,11 +35,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "GetUserByCredential")]
-        public IActionResult GetUserByCredential([FromBody] JsonPayload credentialString)
+        public IActionResult GetUserByCredential([FromBody] JsonPayload credentialJson)
         {
             try
             {
-                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialJson.Data);
                 return Ok(UserDao.GetUserByCredentials(credential.Username, credential.Password));
             }
             catch (Exception ex)
@@ -49,11 +49,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "GetUserByUserCredential")]
-        public IActionResult GetUserByUserCredential([FromBody] JsonPayload userCredentialString)
+        public IActionResult GetUserByUserCredential([FromBody] JsonPayload userCredentialJson)
         {
             try
             {
-                UserCredential userCredential = DecryptAndDeserializeJson<UserCredential>(userCredentialString.Data);
+                UserCredential userCredential = DecryptAndDeserializeJson<UserCredential>(userCredentialJson.Data);
                 return Ok(UserDao.GetUserByCredentials(userCredential.Username, userCredential.Password));
             }
             catch (Exception ex)
@@ -63,11 +63,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "GetUserIDByCredentials")]
-        public IActionResult GetUserIDByCredentials([FromBody] JsonPayload credentialString)
+        public IActionResult GetUserIDByCredentials([FromBody] JsonPayload credentialJson)
         {
             try
             {
-                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialJson.Data);
                 return Ok(UserDao.GetUserIDByCredentials(credential.Username, credential.Password));
             }
             catch (Exception ex)
@@ -77,11 +77,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "GetUserIDByCredential")]
-        public IActionResult GetUserIDByCredential([FromBody] JsonPayload credentialString)
+        public IActionResult GetUserIDByCredential([FromBody] JsonPayload credentialJson)
         {
             try
             {
-                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialJson.Data);
                 return Ok(UserDao.GetUserIDByCredential(credential));
             }
             catch (Exception ex)
@@ -91,11 +91,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "GetUserIDByUserCredential")]
-        public IActionResult GetUserIDByUserCredential([FromBody] JsonPayload userCredentialString)
+        public IActionResult GetUserIDByUserCredential([FromBody] JsonPayload userCredentialJson)
         {
             try
             {
-                UserCredential userCredential = DecryptAndDeserializeJson<UserCredential>(userCredentialString.Data);
+                UserCredential userCredential = DecryptAndDeserializeJson<UserCredential>(userCredentialJson.Data);
                 return Ok(UserDao.GetUserIDByUserCredential(userCredential));
             }
             catch (Exception ex)
@@ -105,11 +105,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "InsertUser")]
-        public IActionResult InsertUser([FromBody] JsonPayload userString)
+        public IActionResult InsertUser([FromBody] JsonPayload userJson)
         {
             try
             {
-                User user = DecryptAndDeserializeJson<User>(userString.Data);
+                User user = DecryptAndDeserializeJson<User>(userJson.Data);
                 return Ok(UserDao.InsertUser(user));
             }
             catch (Exception ex)
@@ -119,11 +119,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "UpdateUser")]
-        public IActionResult UpdateUser(JsonPayload userString)
+        public IActionResult UpdateUser(JsonPayload userJson)
         {
             try
             {
-                User user = DecryptAndDeserializeJson<User>(userString.Data);
+                User user = DecryptAndDeserializeJson<User>(userJson.Data);
                 return Ok(UserDao.UpdateUser(user));
             }
             catch (Exception ex)
@@ -133,11 +133,11 @@ namespace Users.WebApi.Controllers
         }
 
         [HttpPost(Name = "DeleteUser")]
-        public IActionResult DeleteUser([FromBody] JsonPayload userString)
+        public IActionResult DeleteUser([FromBody] JsonPayload userJson)
         {
             try
             {
-                User user = DecryptAndDeserializeJson<User>(userString.Data);
+                User user = DecryptAndDeserializeJson<User>(userJson.Data);
                 return Ok(UserDao.DeleteUser(user));
             }
             catch (Exception ex)
