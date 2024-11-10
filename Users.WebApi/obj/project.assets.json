@@ -3205,11 +3205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\User.WebApi\\User.WebApi\\Users.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\Users.WebApi.csproj",
       "projectName": "Users.WebApi",
-      "projectPath": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\User.WebApi\\User.WebApi\\Users.WebApi.csproj",
+      "projectPath": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\Users.WebApi.csproj",
       "packagesPath": "C:\\Users\\arams\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\User.WebApi\\User.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
