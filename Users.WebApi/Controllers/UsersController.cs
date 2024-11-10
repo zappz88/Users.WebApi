@@ -25,8 +25,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(credentialString.Data);
-                Credential credential = JsonConvert.DeserializeObject<Credential>(decrypted);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
                 return Ok(UserDao.GetUserByCredentials(credential.Username, credential.Password));
             }
             catch (Exception ex)
@@ -40,8 +39,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(credentialString.Data);
-                Credential credential = JsonConvert.DeserializeObject<Credential>(decrypted);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
                 return Ok(UserDao.GetUserByCredentials(credential.Username, credential.Password));
             }
             catch (Exception ex)
@@ -55,8 +53,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(userCredentialString.Data);
-                UserCredential userCredential = JsonConvert.DeserializeObject<UserCredential>(decrypted);
+                UserCredential userCredential = DecryptAndDeserializeJson<UserCredential>(userCredentialString.Data);
                 return Ok(UserDao.GetUserByCredentials(userCredential.Username, userCredential.Password));
             }
             catch (Exception ex)
@@ -70,8 +67,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(credentialString.Data);
-                Credential credential = JsonConvert.DeserializeObject<Credential>(decrypted);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
                 return Ok(UserDao.GetUserIDByCredentials(credential.Username, credential.Password));
             }
             catch (Exception ex)
@@ -85,8 +81,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(credentialString.Data);
-                Credential credential = JsonConvert.DeserializeObject<Credential>(decrypted);
+                Credential credential = DecryptAndDeserializeJson<Credential>(credentialString.Data);
                 return Ok(UserDao.GetUserIDByCredential(credential));
             }
             catch (Exception ex)
@@ -100,8 +95,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(userCredentialString.Data);
-                UserCredential userCredential = JsonConvert.DeserializeObject<UserCredential>(decrypted);
+                UserCredential userCredential = DecryptAndDeserializeJson<UserCredential>(userCredentialString.Data);
                 return Ok(UserDao.GetUserIDByUserCredential(userCredential));
             }
             catch (Exception ex)
@@ -115,8 +109,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(userString.Data);
-                User user = JsonConvert.DeserializeObject<User>(decrypted);
+                User user = DecryptAndDeserializeJson<User>(userString.Data);
                 return Ok(UserDao.InsertUser(user));
             }
             catch (Exception ex)
@@ -130,8 +123,7 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(userString.Data);
-                User user = JsonConvert.DeserializeObject<User>(decrypted);
+                User user = DecryptAndDeserializeJson<User>(userString.Data);
                 return Ok(UserDao.UpdateUser(user));
             }
             catch (Exception ex)
@@ -145,14 +137,21 @@ namespace Users.WebApi.Controllers
         {
             try
             {
-                string decrypted = IEncryptor.Decrypt(userString.Data);
-                User user = JsonConvert.DeserializeObject<User>(decrypted);
+                User user = DecryptAndDeserializeJson<User>(userString.Data);
                 return Ok(UserDao.DeleteUser(user));
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        private T DecryptAndDeserializeJson<T>(string payload) 
+        {
+            T result = default;
+            string decrypted = IEncryptor.Decrypt(payload);
+            result = JsonConvert.DeserializeObject<T>(decrypted);
+            return result;
         }
     }
 }

@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F70379BE-12BA-42B9-8043-95CECB906D9E}|Users.WebApi\\Users.WebApi.csproj|c:\\users\\arams\\documents\\githubrepos\\dotnet\\core\\users.webapi\\users.webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70379BE-12BA-42B9-8043-95CECB906D9E}|Users.WebApi\\Users.WebApi.csproj|solutionrelative:users.webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Users.WebApi\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Users.WebApi\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T13:17:33.828Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
