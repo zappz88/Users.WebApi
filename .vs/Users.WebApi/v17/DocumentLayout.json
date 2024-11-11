@@ -8,6 +8,13 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F16F123-2D6D-4B9F-8F39-1B7EAECB49F9}|..\\DotNETCommon\\Common\\Common.csproj|c:\\users\\arams\\documents\\githubrepos\\dotnet\\core\\dotnetcommon\\common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70379BE-12BA-42B9-8043-95CECB906D9E}|Users.WebApi\\Users.WebApi.csproj|c:\\users\\arams\\documents\\githubrepos\\dotnet\\core\\users.webapi\\users.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70379BE-12BA-42B9-8043-95CECB906D9E}|Users.WebApi\\Users.WebApi.csproj|solutionrelative:users.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F16F123-2D6D-4B9F-8F39-1B7EAECB49F9}|..\\DotNETCommon\\Common\\Common.csproj|c:\\users\\arams\\documents\\githubrepos\\dotnet\\core\\dotnetcommon\\common\\model\\jsonpayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +24,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JsonPayload.cs",
+              "DocumentMoniker": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\DotNETCommon\\Common\\Model\\JsonPayload.cs",
+              "RelativeDocumentMoniker": "..\\DotNETCommon\\Common\\Model\\JsonPayload.cs",
+              "ToolTip": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\DotNETCommon\\Common\\Model\\JsonPayload.cs",
+              "RelativeToolTip": "..\\DotNETCommon\\Common\\Model\\JsonPayload.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T02:13:53.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Users.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\Program.cs",
+              "RelativeToolTip": "Users.WebApi\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T01:30:00.556Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -29,7 +62,8 @@
               "RelativeToolTip": "..\\DotNETCommon\\Common\\Common.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-10T13:58:59.862Z"
+              "WhenOpened": "2024-11-10T13:58:59.862Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -39,7 +73,7 @@
               "RelativeDocumentMoniker": "Users.WebApi\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\arams\\Documents\\GitHubRepos\\DotNET\\Core\\Users.WebApi\\Users.WebApi\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Users.WebApi\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAIAwwIsAAABEAAAA",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAtwJIAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T13:17:33.828Z",
               "EditorCaption": ""
